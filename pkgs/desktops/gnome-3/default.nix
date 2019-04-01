@@ -241,6 +241,8 @@ lib.makeScope pkgs.newScope (self: with self; {
 
   gnome-getting-started-docs = callPackage ./apps/gnome-getting-started-docs { };
 
+  gnome-keysign = callPackage ./apps/gnome-keysign { };
+
   gnome-logs = callPackage ./apps/gnome-logs { };
 
   gnome-maps = callPackage ./apps/gnome-maps { };
