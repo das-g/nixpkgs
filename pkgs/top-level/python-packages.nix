@@ -4242,6 +4242,8 @@ in {
 
   ntplib = callPackage ../development/python-modules/ntplib { };
 
+  nudatus = callPackage ../development/python-modules/nudatus { };
+
   Nuitka = callPackage ../development/python-modules/nuitka { };
 
   num2words = callPackage ../development/python-modules/num2words { };
