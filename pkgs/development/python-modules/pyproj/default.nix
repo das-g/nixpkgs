@@ -8,13 +8,13 @@
 
 buildPythonPackage rec {
   pname = "pyproj";
-  version = "2.2.2";
+  version = "2.4.2";
 
   src = fetchFromGitHub {
     owner = "pyproj4";
     repo = "pyproj";
     rev = "v${version}rel";
-    sha256 = "0mb0jczgqh3sma69k7237i38h09gxgmvmddls9hpw4f3131f5ax7";
+    sha256 = "1ffzps1z1lrrisi05pxmn4zrddlm0sjrkq7y184pzb0gy5bzhzcy";
   };
 
   # force pyproj to use ${pkgs.proj}
