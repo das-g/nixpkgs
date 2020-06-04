@@ -22785,6 +22785,7 @@ in
     botan = botan.override (x: { openssl = null; });
   };
 
+  mu-editor = callPackage ../applications/editors/mu { };
   monotoneViz = callPackage ../applications/version-management/monotone-viz {
     ocamlPackages = ocaml-ng.ocamlPackages_4_01_0;
   };
