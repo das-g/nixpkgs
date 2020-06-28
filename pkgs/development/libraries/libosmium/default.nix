@@ -12,6 +12,7 @@ stdenv.mkDerivation rec {
   };
 
   nativeBuildInputs = [ cmake ];
+
   buildInputs = [ protozero zlib bzip2 expat boost ];
 
 

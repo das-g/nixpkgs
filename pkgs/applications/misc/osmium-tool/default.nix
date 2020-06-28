@@ -1,4 +1,13 @@
-{ stdenv, fetchFromGitHub, cmake, libosmium, protozero, boost, bzip2, zlib, expat }:
+{ stdenv
+, fetchFromGitHub
+, cmake
+, boost
+, bzip2
+, expat
+, libosmium
+, protozero
+, zlib
+}:
 
 stdenv.mkDerivation rec {
   pname = "osmium-tool";
@@ -11,8 +20,18 @@ stdenv.mkDerivation rec {
     sha256 = "13142hj8gfgj6w51a62hjzfmzic90xgrnnlnb70hpdqjy86bxv7j";
   };
 
-  nativeBuildInputs = [ cmake ];
-  buildInputs = [ libosmium protozero boost bzip2 zlib expat ];
+  nativeBuildInputs = [
+    cmake
+  ];
+
+  buildInputs = [
+    boost
+    bzip2
+    expat
+    libosmium
+    protozero
+    zlib
+  ];
 
   meta = with stdenv.lib; {
     description = "Multipurpose command line tool for working with OpenStreetMap data based on the Osmium library";
