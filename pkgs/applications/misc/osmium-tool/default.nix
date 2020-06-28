@@ -1,6 +1,8 @@
 { stdenv
 , fetchFromGitHub
 , cmake
+, installShellFiles
+, pandoc
 , boost
 , bzip2
 , expat
@@ -22,6 +24,8 @@ stdenv.mkDerivation rec {
 
   nativeBuildInputs = [
     cmake
+    installShellFiles
+    pandoc
   ];
 
   buildInputs = [
@@ -32,6 +36,12 @@ stdenv.mkDerivation rec {
     protozero
     zlib
   ];
+
+  doCheck = true;
+
+  postInstall = ''
+    installShellCompletion --zsh ../zsh_completion/_osmium
+  '';
 
   meta = with stdenv.lib; {
     description = "Multipurpose command line tool for working with OpenStreetMap data based on the Osmium library";
