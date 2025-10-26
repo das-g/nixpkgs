@@ -77,6 +77,10 @@ stdenv.mkDerivation (finalAttrs: {
     python3.pkgs.woob
   ];
 
+  patches = [
+    ./kmymoney-fix-build-against-qt-6-10.patch
+  ];
+
   postPatch = ''
     buildPythonPath "${python3.pkgs.woob}"
     patchPythonScript "kmymoney/plugins/woob/interface/kmymoneywoob.py"
